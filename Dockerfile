@@ -54,7 +54,8 @@ WORKDIR /app
 
 # 1. Copy all build files from Stage 1
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.env ./.env
+# COPY --from=builder /app/.env ./.env
+COPY --from=builder /app/.env ./.env.example
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/generated ./generated
 
