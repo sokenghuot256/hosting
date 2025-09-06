@@ -40,7 +40,7 @@ RUN pnpm install
 COPY . .
 
 # 4. Run prisma generate
-# RUN npx prisma generate
+RUN npx prisma generate
 
 # 5. Run pnpm build
 RUN pnpm build
